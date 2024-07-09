@@ -1,0 +1,177 @@
+---
+title: "Billing Plan -- Get"
+description: "get https://dialpad.com/api/v2/offices/{office_id}/plan"
+---
+#### URL Expired
+
+The URL for this request expired after 30 days.
+
+office\_id
+
+int64
+
+required
+
+The office's id.
+
+# 200A successful response
+
+object
+
+additional\_number\_lines
+
+int64 | null
+
+The number of additional-number lines allocated for this plan.
+
+additional-number lines are consumed when multiple numbers are assigned to a target. i.e. if any callable entity has more than one direct number, one additional-number line is consumed for each number after the first number. This line type is available for all account types.
+
+contact\_center\_lines
+
+int64 | null
+
+The number of contact-center lines allocated for this plan.
+
+Contact-center lines are consumed for new users that can serve as call center agents, but does  
+_not_ include a primary number for the user. This line type is only available for pro and enterprise accounts.
+
+fax\_lines
+
+int64 | null
+
+The number of fax lines allocated for this plan.
+
+Fax lines are consumed when a fax number is assigned to a user, office, department etc. Fax lines can be used with or without a physical fax machine, as received faxes are exposed as PDFs in the Dialpad app. This line type is available for all account types.
+
+next\_billing\_date
+
+int64 | null
+
+The UTC timestamp of the start of the next billing cycle.
+
+ppu\_address
+
+object | null
+
+The "Place of Primary Use" address.
+
+address\_line\_1
+
+string | null
+
+The first line of the billing address.
+
+address\_line\_2
+
+string | null
+
+The second line of the billing address.
+
+city
+
+string | null
+
+The billing address city.
+
+country
+
+string | null
+
+The billing address country.
+
+postal\_code
+
+string | null
+
+The billing address postal code.
+
+region
+
+string | null
+
+The billing address region.
+
+room\_lines
+
+int64 | null
+
+The number of room lines allocated for this plan.
+
+Room lines are consumed when a new room with a dedicated number is created. This line type is available for all account types.
+
+sell\_lines
+
+int64 | null
+
+The number of sell lines allocated for this plan.
+
+Sell lines are consumed for new users that can serve as call center agents and includes a primary number for that user. This line type is only available for pro and enterprise accounts.
+
+talk\_lines
+
+int64 | null
+
+The number of talk lines allocated for this plan.
+
+Talk lines are consumed when a new user with a primary number is created. This line type is available for all account types, and does not include the ability for the user to be a call center agent.
+
+tollfree\_additional\_number\_lines
+
+int64 | null
+
+The number of toll-free-additional-number lines allocated for this plan.
+
+These are functionally equivalent to additional-number lines, except that the number is a toll-free number. This line type is available for all account types.
+
+tollfree\_room\_lines
+
+int64 | null
+
+The number of toll-free room lines allocated for this plan.
+
+These are functionally equivalent to room lines, except that the room's primary number is a toll-free number (subsequent numbers for a given room will still consume additional-number/toll-free-additional-number lines rather than multiple room lines). This line type is available for all account types.
+
+tollfree\_uberconference\_lines
+
+int64 | null
+
+The number of toll-free uberconference lines allocated for this plan.
+
+Uberconference lines are consumed when a direct number is allocated for a User's uberconference room. This line type is available for all account types.
+
+uberconference\_lines
+
+int64 | null
+
+The number of uberconference lines available for this office.
+
+Uberconference lines are consumed when a direct number is allocated for a User's uberconference room. This line type is available for all account types.
+
+
+
+ShellNodeRubyPHPPython
+
+Base URL
+
+https://dialpad.com/api/v2/offices/{office\_id}/plan
+
+xxxxxxxxxx
+
+1
+
+curl \--request GET \\
+
+2
+
+     \--url https://dialpad.com/api/v2/offices/office\_id/plan \\
+
+3
+
+     \--header 'accept: application/json'
+
+Click `Try It!` to start a request and see the response here! Or choose an example:
+
+application/json
+
+200 - json example
+
