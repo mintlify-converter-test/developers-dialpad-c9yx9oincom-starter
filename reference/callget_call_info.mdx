@@ -1,0 +1,478 @@
+---
+title: "Call -- Get"
+description: "get https://dialpad.com/api/v2/call/{id}"
+---
+#### URL Expired
+
+The URL for this request expired after 30 days.
+
+id
+
+int64
+
+required
+
+The call's id.
+
+# 200A successful response
+
+object
+
+admin\_call\_recording\_share\_links
+
+array of strings | null
+
+A list of admin call recording share links.
+
+admin\_call\_recording\_share\_links
+
+call\_id
+
+int64 | null
+
+A unique number ID automatically assigned to each call.
+
+call\_recording\_share\_links
+
+array of strings | null
+
+A list of call recording share links.
+
+call\_recording\_share\_links
+
+contact
+
+object | null
+
+This is the contact involved in the call.
+
+email
+
+string | null
+
+The primary email address of the contact.
+
+id
+
+string | null
+
+A unique number ID for the contact.
+
+name
+
+string | null
+
+Name of contact.
+
+phone
+
+string | null
+
+The primary phone number of the contact.
+
+type
+
+string | null
+
+Type of the contact.
+
+csat\_recording\_urls
+
+array of strings | null
+
+A list of CSAT urls related to the call.
+
+csat\_recording\_urls
+
+csat\_score
+
+string | null
+
+CSAT score related to the call.
+
+csat\_transcriptions
+
+array of strings | null
+
+A list of CSAT texts related to the call.
+
+csat\_transcriptions
+
+custom\_data
+
+string | null
+
+Any custom data.
+
+date\_connected
+
+int64 | null
+
+Timestamp when Dialpad connected the call.
+
+date\_ended
+
+int64 | null
+
+Timestamp when the call was hung up.
+
+date\_rang
+
+int64 | null
+
+Timestamp when Dialpad first detects an inbound call toa mainline, department, or person.
+
+date\_started
+
+int64 | null
+
+Timestamp when the call began in the Dialpad system before being connected.
+
+direction
+
+string | null
+
+Call direction. Indicates whether a call was outbound or inbound.
+
+duration
+
+double | null
+
+Duration of the call in milliseconds.
+
+entry\_point\_call\_id
+
+int64 | null
+
+Call ID of the associated entry point call.
+
+entry\_point\_target
+
+object | null
+
+Where a call initially dialed for inbound calls to Dialpad.
+
+email
+
+string | null
+
+The primary email address of the contact.
+
+id
+
+string | null
+
+A unique number ID for the contact.
+
+name
+
+string | null
+
+Name of contact.
+
+phone
+
+string | null
+
+The primary phone number of the contact.
+
+type
+
+string | null
+
+Type of the contact.
+
+event\_timestamp
+
+int64 | null
+
+Timestamp of when this call event happened.
+
+external\_number
+
+string | null
+
+The phone number external to your organization.
+
+group\_id
+
+string | null
+
+Unique ID of the department, mainline, or call queue associated with the call.
+
+internal\_number
+
+string | null
+
+The phone number internal to your organization.
+
+is\_transferred
+
+boolean | null
+
+Boolean indicating whether or not the call was transferred.
+
+labels
+
+array of strings | null
+
+The label's associated to this call.
+
+labels
+
+master\_call\_id
+
+int64 | null
+
+The master id of the specified call.
+
+mos\_score
+
+double | null
+
+Mean Opinion Score
+
+operator\_call\_id
+
+int64 | null
+
+The id of operator.
+
+proxy\_target
+
+object | null
+
+Caller ID used by the Dialpad user for outbound calls.
+
+email
+
+string | null
+
+The primary email address of the contact.
+
+id
+
+string | null
+
+A unique number ID for the contact.
+
+name
+
+string | null
+
+Name of contact.
+
+phone
+
+string | null
+
+The primary phone number of the contact.
+
+type
+
+string | null
+
+Type of the contact.
+
+recording\_details
+
+array of objects | null
+
+List of associated recording details.
+
+recording\_details
+
+object
+
+duration
+
+int64 | null
+
+The duration of the recording in milliseconds
+
+id
+
+string | null
+
+The recording ID
+
+recording\_type
+
+string | null
+
+The recording type
+
+`admincallrecording` `callrecording` `voicemail`
+
+start\_time
+
+int64 | null
+
+The recording start timestamp
+
+url
+
+string | null
+
+The access URL of the recording
+
+routing\_breadcrumbs
+
+array of objects | null
+
+The routing breadcrumbs
+
+routing\_breadcrumbs
+
+object
+
+breadcrumb\_type
+
+string | null
+
+Breadcrumb type
+
+`callrouter` `external_api`
+
+date
+
+int64 | null
+
+Date when this breadcrumb was added
+
+request
+
+object | null
+
+The HTTP request payload associated with this breadcrumb
+
+Has additional fields
+
+response
+
+object | null
+
+The HTTP response associated with this breadcrumb
+
+Has additional fields
+
+target\_id
+
+int64 | null
+
+The target id
+
+target\_type
+
+string | null
+
+The target type from call
+
+url
+
+string | null
+
+The URL that should be used to drive call routing decisions.
+
+screen\_recording\_urls
+
+array of strings | null
+
+A list of screen recording urls.
+
+screen\_recording\_urls
+
+state
+
+string | null
+
+Current call state.
+
+target
+
+object | null
+
+This is the target that the Dialpad user dials or receives a call from.
+
+email
+
+string | null
+
+The primary email address of the contact.
+
+id
+
+string | null
+
+A unique number ID for the contact.
+
+name
+
+string | null
+
+Name of contact.
+
+phone
+
+string | null
+
+The primary phone number of the contact.
+
+type
+
+string | null
+
+Type of the contact.
+
+total\_duration
+
+double | null
+
+Duration of the call in milliseconds, including ring time.
+
+transcription\_text
+
+string | null
+
+Text of call transcription.
+
+voicemail\_share\_link
+
+string | null
+
+Share link to the voicemail recording.
+
+was\_recorded
+
+boolean | null
+
+Boolean indicating whether or not the call was recorded.
+
+
+
+ShellNodeRubyPHPPython
+
+Base URL
+
+https://dialpad.com/api/v2/call/{id}
+
+xxxxxxxxxx
+
+1
+
+curl \--request GET \\
+
+2
+
+     \--url https://dialpad.com/api/v2/call/id \\
+
+3
+
+     \--header 'accept: application/json'
+
+Click `Try It!` to start a request and see the response here! Or choose an example:
+
+application/json
+
+200 - json example
+
