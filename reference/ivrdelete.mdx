@@ -1,0 +1,124 @@
+---
+title: "Custom IVR -- Delete"
+description: "delete https://dialpad.com/api/v2/customivrs/{target_type}/{target_id}/{ivr_type}"
+---
+#### URL Expired
+
+The URL for this request expired after 30 days.
+
+target\_type
+
+string
+
+required
+
+Target's type. of the custom ivr to be updated.
+
+callcentercallrouterchannelcoachinggroupcoachingteamdepartmentofficeroomstaffgroupunknownuser
+
+target\_id
+
+int64
+
+required
+
+The id of the target.
+
+ivr\_type
+
+string
+
+required
+
+Type of ivr you want to update.
+
+ASK\_FIRST\_OPERATOR\_NOT\_AVAILABLEAUTO\_RECORDINGCALLAI\_AUTO\_RECORDINGCG\_AUTO\_RECORDINGCLOSEDCLOSED\_DEPARTMENT\_INTROCLOSED\_MENUCLOSED\_MENU\_OPTIONCSAT\_INTROCSAT\_OUTROCSAT\_PREAMBLECSAT\_QUESTIONDEPARTMENT\_INTROGREETINGHOLD\_AGENT\_READYHOLD\_APPRECHOLD\_CALLBACK\_ACCEPTHOLD\_CALLBACK\_ACCEPTEDHOLD\_CALLBACK\_CONFIRMHOLD\_CALLBACK\_CONFIRM\_NUMBERHOLD\_CALLBACK\_DIFFERENT\_NUMBERHOLD\_CALLBACK\_DIRECTHOLD\_CALLBACK\_FULFILLEDHOLD\_CALLBACK\_INVALID\_NUMBERHOLD\_CALLBACK\_KEYPADHOLD\_CALLBACK\_REJECTHOLD\_CALLBACK\_REJECTEDHOLD\_CALLBACK\_REQUESTHOLD\_CALLBACK\_REQUESTEDHOLD\_CALLBACK\_SAME\_NUMBERHOLD\_CALLBACK\_TRY\_AGAINHOLD\_CALLBACK\_UNDIALABLEHOLD\_ESCAPE\_VM\_EIGHTHOLD\_ESCAPE\_VM\_FIVEHOLD\_ESCAPE\_VM\_FOURHOLD\_ESCAPE\_VM\_NINEHOLD\_ESCAPE\_VM\_ONEHOLD\_ESCAPE\_VM\_POUNDHOLD\_ESCAPE\_VM\_SEVENHOLD\_ESCAPE\_VM\_SIXHOLD\_ESCAPE\_VM\_STARHOLD\_ESCAPE\_VM\_TENHOLD\_ESCAPE\_VM\_THREEHOLD\_ESCAPE\_VM\_TWOHOLD\_ESCAPE\_VM\_ZEROHOLD\_INTERRUPTHOLD\_INTROHOLD\_MUSICHOLD\_POSITION\_EIGHTHOLD\_POSITION\_FIVEHOLD\_POSITION\_FOURHOLD\_POSITION\_MOREHOLD\_POSITION\_NINEHOLD\_POSITION\_ONEHOLD\_POSITION\_SEVENHOLD\_POSITION\_SIXHOLD\_POSITION\_TENHOLD\_POSITION\_THREEHOLD\_POSITION\_TWOHOLD\_POSITION\_ZEROHOLD\_WAITMENUMENU\_OPTIONNEXT\_TARGETVM\_DROP\_MESSAGEVM\_UNAVAILABLEVM\_UNAVAILABLE\_CLOSED
+
+ivr\_id
+
+int64 | null
+
+required
+
+The id of the ivr that you want to use for the ivr type.
+
+select\_option
+
+string | null
+
+For call center auto call recording only. Set ivr for inbound or outbound. Default is both.
+
+inboundoutbound
+
+# 200A successful response
+
+object
+
+date\_added
+
+int64 | null
+
+Date when this IVR was added.
+
+description
+
+string | null
+
+The description of the IVR.
+
+id
+
+int64 | null
+
+Id of this IVR.
+
+name
+
+string | null
+
+The name of this IVR.
+
+selected
+
+boolean | null
+
+True if this IVR is selected for this type of IVR.
+
+text
+
+string | null
+
+The text for this IVR if there is no mp3.
+
+
+
+ShellNodeRubyPHPPython
+
+Base URL
+
+https://dialpad.com/api/v2/customivrs/{target\_type}/{target\_id}/{ivr\_type}
+
+xxxxxxxxxx
+
+1
+
+curl \--request DELETE \\
+
+2
+
+     \--url https://dialpad.com/api/v2/customivrs/callcenter/target\_id/ASK\_FIRST\_OPERATOR\_NOT\_AVAILABLE \\
+
+3
+
+     \--header 'accept: application/json' \\
+
+4
+
+     \--header 'content-type: application/json'
+
+Click `Try It!` to start a request and see the response here! Or choose an example:
+
+application/json
+
+200 - json example
+
