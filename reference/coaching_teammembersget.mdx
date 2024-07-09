@@ -1,0 +1,268 @@
+---
+title: "Coaching Team -- List Members"
+description: "get https://dialpad.com/api/v2/coachingteams/{id}/members"
+---
+| time | status | user agent |     |
+| --- | --- | --- | --- |
+| Retrieving recent requests… |     |     |     |
+
+LoadingLoading…
+
+#### URL Expired
+
+The URL for this request expired after 30 days.
+
+id
+
+int64
+
+required
+
+Id of the coaching team
+
+# 200A successful response
+
+object
+
+cursor
+
+string | null
+
+A token used to return the next page of results.
+
+items
+
+array of objects | null
+
+A list of team members.
+
+items
+
+object
+
+admin\_office\_ids
+
+array of int64s | null
+
+The list of ids of offices where the user is an admin.
+
+admin\_office\_ids
+
+company\_id
+
+int64 | null
+
+The id of user's company.
+
+country
+
+string | null
+
+Country of the user.
+
+date\_active
+
+date-time | null
+
+The date when the user is activated.
+
+date\_added
+
+date-time | null
+
+The date when the user is added.
+
+date\_first\_login
+
+date-time | null
+
+The date when the user is logged in first time.
+
+do\_not\_disturb
+
+boolean | null
+
+Boolean to tell if the user is on DND.
+
+emails
+
+array of strings | null
+
+Emails of the user.
+
+emails
+
+extension
+
+string | null
+
+Extension of the user.
+
+first\_name
+
+string | null
+
+First name of the user.
+
+forwarding\_numbers
+
+array of strings | null
+
+The list of forwarding numbers set for the user.
+
+forwarding\_numbers
+
+id
+
+int64 | null
+
+required
+
+Unique id of the user.
+
+image\_url
+
+string | null
+
+Link to the user's profile image.
+
+is\_admin
+
+boolean | null
+
+Boolean to tell if the user is admin.
+
+is\_available
+
+boolean | null
+
+Boolean to tell if the user is available.
+
+is\_on\_duty
+
+boolean | null
+
+Boolean to tell if the user is on duty.
+
+is\_online
+
+boolean | null
+
+Boolean to tell if the user is online.
+
+is\_super\_admin
+
+boolean | null
+
+Boolean to tell if the user is super admin.
+
+job\_title
+
+string | null
+
+Job title of the user.
+
+language
+
+string | null
+
+Language of the user.
+
+last\_name
+
+string | null
+
+Last name of the User.
+
+license
+
+string | null
+
+License of the user.
+
+`admins` `agents` `dpde_all` `dpde_one` `lite_lines` `lite_support_agents` `magenta_lines` `talk`
+
+location
+
+string | null
+
+Where is the user.
+
+muted
+
+boolean | null
+
+Boolean to tell if the user is muted.
+
+office\_id
+
+int64 | null
+
+Id of the user's office.
+
+phone\_numbers
+
+array of strings | null
+
+The list of phone numbers assigned to the user.
+
+phone\_numbers
+
+role
+
+string | null
+
+required
+
+The role of the user within the coaching team.
+
+`coach` `trainee`
+
+state
+
+string | null
+
+The enablement state of the user.
+
+`active` `cancelled` `deleted` `pending` `suspended`
+
+status\_message
+
+string | null
+
+Status message set by the user.
+
+timezone
+
+string | null
+
+Timezone of the user.
+
+
+
+ShellNodeRubyPHPPython
+
+Base URL
+
+https://dialpad.com/api/v2/coachingteams/{id}/members
+
+xxxxxxxxxx
+
+1
+
+curl \--request GET \\
+
+2
+
+     \--url https://dialpad.com/api/v2/coachingteams/id/members \\
+
+3
+
+     \--header 'accept: application/json'
+
+Click `Try It!` to start a request and see the response here! Or choose an example:
+
+application/json
+
+200 - json example
+
