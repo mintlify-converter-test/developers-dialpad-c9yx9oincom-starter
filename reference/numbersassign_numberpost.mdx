@@ -1,0 +1,166 @@
+---
+title: "Dialpad Number -- Assign"
+description: "post https://dialpad.com/api/v2/numbers/{number}/assign"
+---
+#### URL Expired
+
+The URL for this request expired after 30 days.
+
+number
+
+string
+
+required
+
+A specific number to assign
+
+primary
+
+boolean | null
+
+Defaults to true
+
+A boolean indicating whether this should become the target's primary phone number.
+
+truefalse
+
+target\_id
+
+int64 | null
+
+required
+
+The ID of the target to reassign this number to.
+
+target\_type
+
+string | null
+
+required
+
+The type of the target.
+
+callcentercallrouterchannelcoachinggroupcoachingteamdepartmentofficeroomstaffgroupunknownuser
+
+# 200A successful response
+
+object
+
+area\_code
+
+string | null
+
+The area code of the number.
+
+company\_id
+
+int64 | null
+
+The ID of the associated company.
+
+deleted
+
+boolean | null
+
+A boolean indicating whether this number has been ported out of Dialpad.
+
+number
+
+string | null
+
+The e164-formatted number.
+
+office\_id
+
+int64 | null
+
+The ID of the associate office.
+
+status
+
+string | null
+
+The current assignment status of this number.
+
+`available` `call_center` `call_router` `department` `dynamic_caller` `office` `pending` `porting` `room` `user`
+
+target\_id
+
+int64 | null
+
+The ID of the target to which this number is assigned.
+
+target\_type
+
+string | null
+
+The type of the target to which this number is assigned.
+
+`callcenter` `callrouter` `channel` `coachinggroup` `coachingteam` `department` `office` `room` `staffgroup` `unknown` `user`
+
+type
+
+string | null
+
+The number type.
+
+`free` `local` `mobile` `softbank` `tollfree`
+
+
+
+ShellNodeRubyPHPPython
+
+Base URL
+
+https://dialpad.com/api/v2/numbers/{number}/assign
+
+xxxxxxxxxx
+
+10
+
+1
+
+curl \--request POST \\
+
+2
+
+     \--url https://dialpad.com/api/v2/numbers/number/assign \\
+
+3
+
+     \--header 'accept: application/json' \\
+
+4
+
+     \--header 'content-type: application/json' \\
+
+5
+
+     \--data '
+
+6
+
+{
+
+7
+
+  "primary": true,
+
+8
+
+  "target\_type": "callcenter"
+
+9
+
+}
+
+10
+
+'
+
+Click `Try It!` to start a request and see the response here! Or choose an example:
+
+application/json
+
+200 - json example
+
