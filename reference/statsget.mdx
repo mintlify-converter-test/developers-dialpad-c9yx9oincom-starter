@@ -1,0 +1,68 @@
+---
+title: "Stats -- Get Result"
+description: "get https://dialpad.com/api/v2/stats/{id}"
+---
+#### URL Expired
+
+The URL for this request expired after 30 days.
+
+id
+
+string
+
+required
+
+Request ID returned by a POST /stats request.
+
+# 200A successful response
+
+object
+
+download\_url
+
+string | null
+
+The URL of the resulting stats file.
+
+file\_type
+
+string | null
+
+The file format of the resulting stats file.
+
+status
+
+string | null
+
+The current status of the processing request.
+
+`complete` `failed` `processing`
+
+
+
+ShellNodeRubyPHPPython
+
+Base URL
+
+https://dialpad.com/api/v2/stats/{id}
+
+xxxxxxxxxx
+
+1
+
+curl \--request GET \\
+
+2
+
+     \--url https://dialpad.com/api/v2/stats/id \\
+
+3
+
+     \--header 'accept: application/json'
+
+Click `Try It!` to start a request and see the response here! Or choose an example:
+
+application/json
+
+200 - json example
+
