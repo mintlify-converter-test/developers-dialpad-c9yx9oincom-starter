@@ -1,0 +1,174 @@
+---
+title: "Schedule reports -- Delete"
+description: "delete https://dialpad.com/api/v2/schedulereports/{id}"
+---
+#### URL Expired
+
+The URL for this request expired after 30 days.
+
+id
+
+int64
+
+required
+
+The schedule reports subscription's ID.
+
+# 200A successful response
+
+object
+
+at
+
+int64 | null
+
+Hour of the day when the report will execute considering the frequency and timezones between 0 and 23 e.g. 10 will be 10:00 am.
+
+coaching\_group
+
+boolean | null
+
+Whether the the statistics should be for trainees of the coach group with the given target\_id.
+
+enabled
+
+boolean | null
+
+Defaults to true
+
+Whether or not the this agent status event subscription is enabled.
+
+frequency
+
+string | null
+
+The frequency of the schedule reports.
+
+id
+
+int64 | null
+
+The schedule reports subscription's ID, which is generated after creating an schedule reports subscription successfully.
+
+name
+
+string | null
+
+The day to be send the schedule reports.
+
+on\_day
+
+int64 | null
+
+The day of the week or month when the report will execute considering the frequency. daily=0, weekly=0-6, monthly=0-30.
+
+report\_type
+
+string | null
+
+required
+
+The report options filters.
+
+`call_logs` `daily_statistics` `recordings` `user_statistics` `voicemails`
+
+target\_id
+
+int64 | null
+
+The target's id.
+
+target\_type
+
+string | null
+
+Target's type.
+
+`callcenter` `callrouter` `channel` `coachinggroup` `coachingteam` `company` `department` `office` `room` `staffgroup` `unknown` `user`
+
+timezone
+
+string | null
+
+Timezone using a tz database name.
+
+webhook
+
+object | null
+
+The webhook's ID, which is generated after creating a webhook successfully.
+
+hook\_url
+
+string | null
+
+The webhook's URL. Triggered events will be sent to the url provided here.
+
+id
+
+int64 | null
+
+The webhook's ID, which is generated after creating a webhook successfully.
+
+signature
+
+object | null
+
+Webhook's signature containing the secret.
+
+Signature settings. object | null
+
+websocket
+
+object | null
+
+The websocket's ID, which is generated after creating a webhook successfully.
+
+id
+
+int64 | null
+
+The webhook's ID, which is generated after creating a webhook successfully.
+
+signature
+
+object | null
+
+Webhook's signature containing the secret.
+
+Signature settings. object | null
+
+websocket\_url
+
+string | null
+
+The websocket's URL. Users need to connect to this url to get event payloads via websocket.
+
+
+
+ShellNodeRubyPHPPython
+
+Base URL
+
+https://dialpad.com/api/v2/schedulereports/{id}
+
+xxxxxxxxxx
+
+1
+
+curl \--request DELETE \\
+
+2
+
+     \--url https://dialpad.com/api/v2/schedulereports/id \\
+
+3
+
+     \--header 'accept: application/json'
+
+Click `Try It!` to start a request and see the response here! Or choose an example:
+
+application/json
+
+200
+
