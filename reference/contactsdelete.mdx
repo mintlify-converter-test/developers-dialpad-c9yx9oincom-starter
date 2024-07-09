@@ -1,0 +1,152 @@
+---
+title: "Contact -- Delete"
+description: "delete https://dialpad.com/api/v2/contacts/{id}"
+---
+| time | status | user agent |     |
+| --- | --- | --- | --- |
+| Retrieving recent requests… |     |     |     |
+
+LoadingLoading…
+
+#### URL Expired
+
+The URL for this request expired after 30 days.
+
+id
+
+string
+
+required
+
+The contact's id.
+
+# 200A successful response
+
+object
+
+company\_name
+
+string | null
+
+The name of the company that this contact is employed by.
+
+display\_name
+
+string | null
+
+The formatted name that will be displayed for this contact.
+
+emails
+
+array of strings | null
+
+The email addresses associated with this contact.
+
+emails
+
+extension
+
+string | null
+
+The contact's extension number.
+
+first\_name
+
+string | null
+
+The given name of the contact.
+
+id
+
+string | null
+
+The ID of the contact.
+
+job\_title
+
+string | null
+
+The job title of this contact.
+
+last\_name
+
+string | null
+
+The family name of the contact.
+
+owner\_id
+
+string | null
+
+The ID of the entity that owns this contact.
+
+phones
+
+array of strings | null
+
+The phone numbers associated with this contact.
+
+phones
+
+primary\_email
+
+string | null
+
+The email address to display in a context where only one email can be shown.
+
+primary\_phone
+
+string | null
+
+The primary phone number to be used when calling this contact.
+
+trunk\_group
+
+string | null
+
+\[Deprecated\]
+
+type
+
+string | null
+
+Either shared or local.
+
+`local` `shared`
+
+urls
+
+array of strings | null
+
+A list of websites associated with or belonging to this contact.
+
+urls
+
+
+
+ShellNodeRubyPHPPython
+
+Base URL
+
+https://dialpad.com/api/v2/contacts/{id}
+
+xxxxxxxxxx
+
+1
+
+curl \--request DELETE \\
+
+2
+
+     \--url https://dialpad.com/api/v2/contacts/id \\
+
+3
+
+     \--header 'accept: application/json'
+
+Click `Try It!` to start a request and see the response here! Or choose an example:
+
+application/json
+
+200
+
