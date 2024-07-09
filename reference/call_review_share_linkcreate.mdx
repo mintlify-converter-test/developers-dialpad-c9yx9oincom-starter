@@ -1,0 +1,108 @@
+---
+title: "Call Review Sharelink -- Create"
+description: "post https://dialpad.com/api/v2/callreviewsharelink"
+---
+#### URL Expired
+
+The URL for this request expired after 30 days.
+
+call\_id
+
+int64 | null
+
+The call's id.
+
+privacy
+
+string | null
+
+Defaults to company
+
+The privacy state of the recording share link, 'company' will be set as default.
+
+Default: `company`
+
+companypublic
+
+# 200A successful response
+
+object
+
+access\_link
+
+string | null
+
+The access link where the call review can be listened or downloaded.
+
+call\_id
+
+int64 | null
+
+The call's id.
+
+id
+
+string | null
+
+The call review share link's ID.
+
+privacy
+
+string | null
+
+The privacy state of the call review sharel link.
+
+`company` `public`
+
+
+
+ShellNodeRubyPHPPython
+
+Base URL
+
+https://dialpad.com/api/v2/callreviewsharelink
+
+xxxxxxxxxx
+
+1
+
+curl \--request POST \\
+
+2
+
+     \--url https://dialpad.com/api/v2/callreviewsharelink \\
+
+3
+
+     \--header 'accept: application/json' \\
+
+4
+
+     \--header 'content-type: application/json' \\
+
+5
+
+     \--data '
+
+6
+
+{
+
+7
+
+  "privacy": "company"
+
+8
+
+}
+
+9
+
+'
+
+Click `Try It!` to start a request and see the response here! Or choose an example:
+
+application/json
+
+200
+
