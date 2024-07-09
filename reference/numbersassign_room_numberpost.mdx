@@ -1,0 +1,138 @@
+---
+title: "Dialpad Number -- Assign"
+description: "post https://dialpad.com/api/v2/rooms/{id}/assign_number"
+---
+#### URL Expired
+
+The URL for this request expired after 30 days.
+
+id
+
+int64
+
+required
+
+The room's id.
+
+area\_code
+
+string | null
+
+An area code in which to find an available phone number for assignment.
+
+number
+
+string | null
+
+A phone number to assign. (e164-formatted)
+
+primary
+
+boolean | null
+
+Defaults to true
+
+A boolean indicating whether this should become the primary phone number.
+
+truefalse
+
+# 200A successful response
+
+object
+
+area\_code
+
+string | null
+
+The area code of the number.
+
+company\_id
+
+int64 | null
+
+The ID of the associated company.
+
+deleted
+
+boolean | null
+
+A boolean indicating whether this number has been ported out of Dialpad.
+
+number
+
+string | null
+
+The e164-formatted number.
+
+office\_id
+
+int64 | null
+
+The ID of the associate office.
+
+status
+
+string | null
+
+The current assignment status of this number.
+
+`available` `call_center` `call_router` `department` `dynamic_caller` `office` `pending` `porting` `room` `user`
+
+target\_id
+
+int64 | null
+
+The ID of the target to which this number is assigned.
+
+target\_type
+
+string | null
+
+The type of the target to which this number is assigned.
+
+`callcenter` `callrouter` `channel` `coachinggroup` `coachingteam` `department` `office` `room` `staffgroup` `unknown` `user`
+
+type
+
+string | null
+
+The number type.
+
+`free` `local` `mobile` `softbank` `tollfree`
+
+
+
+ShellNodeRubyPHPPython
+
+Base URL
+
+https://dialpad.com/api/v2/rooms/{id}/assign\_number
+
+xxxxxxxxxx
+
+1
+
+curl \--request POST \\
+
+2
+
+     \--url https://dialpad.com/api/v2/rooms/id/assign\_number \\
+
+3
+
+     \--header 'accept: application/json' \\
+
+4
+
+     \--header 'content-type: application/json' \\
+
+5
+
+     \--data '{"primary":true}'
+
+Click `Try It!` to start a request and see the response here! Or choose an example:
+
+application/json
+
+200 - json example
+
