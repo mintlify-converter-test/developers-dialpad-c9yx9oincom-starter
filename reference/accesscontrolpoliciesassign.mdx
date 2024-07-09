@@ -1,0 +1,383 @@
+---
+title: "Access Control Policies -- Assign"
+description: "post https://dialpad.com/api/v2/accesscontrolpolicies/{id}/assign"
+---
+#### URL Expired
+
+The URL for this request expired after 30 days.
+
+id
+
+int64
+
+required
+
+The access control policy's id.
+
+target\_id
+
+int64 | null
+
+Required if the policy is associated with a target (Office or Contact Center). Not required for a company level policy.
+
+target\_type
+
+string | null
+
+Defaults to company
+
+Policy permissions applied at this target level. Defaults to company target type.
+
+Default: `company`
+
+callcentercompanyoffice
+
+user\_id
+
+int64 | null
+
+required
+
+The user's id to be assigned to the policy.
+
+# 200A successful response
+
+object
+
+policy\_targets
+
+array of objects | null
+
+Policy targets associated with the role.
+
+policy\_targets
+
+object
+
+target\_id
+
+int64 | null
+
+required
+
+All targets associated with the policy.
+
+target\_type
+
+string | null
+
+Defaults to company
+
+Policy permissions applied at this target level. Defaults to company target type.
+
+`callcenter` `company` `office`
+
+user
+
+object | null
+
+The user associated to the role.
+
+admin\_office\_ids
+
+array of int64s | null
+
+A list of office IDs for which this user has admin privilages.
+
+admin\_office\_ids
+
+company\_id
+
+int64 | null
+
+The id of the user's company.
+
+country
+
+string | null
+
+The country in which the user resides.
+
+date\_active
+
+date-time | null
+
+The date when the user activated their Dialpad account.
+
+date\_added
+
+date-time | null
+
+A timestamp indicating when this user was created.
+
+date\_first\_login
+
+date-time | null
+
+A timestamp indicating the first time that this user logged in to Dialpad.
+
+do\_not\_disturb
+
+boolean | null
+
+A boolean indicating whether the user is currently in "Do not disturb" mode.
+
+duty\_status\_reason
+
+string | null
+
+A description of this status.
+
+duty\_status\_started
+
+date-time | null
+
+The timestamp, in UTC, when the current on duty status changed.
+
+emails
+
+array of strings | null
+
+A list of email addresses belonging to this user.
+
+emails
+
+extension
+
+string | null
+
+The extension that should be associated with this user in the company or office IVR directory.
+
+first\_name
+
+string | null
+
+The given name of the user.
+
+forwarding\_numbers
+
+array of strings | null
+
+A list of phone numbers that should be dialed in addition to the user's Dialpad number(s)  
+upon receiving a call.
+
+forwarding\_numbers
+
+group\_details
+
+array of objects | null
+
+Details regarding the groups that this user is a member of.
+
+group\_details
+
+object
+
+do\_not\_disturb
+
+boolean | null
+
+Whether the user is currently in do-not-disturb mode for this group.
+
+group\_id
+
+int64 | null
+
+The ID of the group.
+
+group\_type
+
+string | null
+
+The group type.
+
+`callcenter` `callrouter` `channel` `coachinggroup` `coachingteam` `department` `office` `room` `staffgroup` `unknown` `user`
+
+role
+
+string | null
+
+The user's role in the group.
+
+`admin` `operator` `supervisor`
+
+id
+
+int64 | null
+
+The user's id.
+
+image\_url
+
+string | null
+
+The url of the user's profile image.
+
+is\_admin
+
+boolean | null
+
+A boolean indicating whether this user has administor privilages.
+
+is\_available
+
+boolean | null
+
+A boolean indicating whether the user is not currently on a call.
+
+is\_on\_duty
+
+boolean | null
+
+A boolean indicating whether this user is currently acting as an operator.
+
+is\_online
+
+boolean | null
+
+A boolean indicating whether the user currently has an active Dialpad device.
+
+is\_super\_admin
+
+boolean | null
+
+A boolean indicating whether this user has company-wide administor privilages.
+
+job\_title
+
+string | null
+
+The user's job title.
+
+language
+
+string | null
+
+The preferred spoken language of the user.
+
+last\_name
+
+string | null
+
+The family name of the user.
+
+license
+
+string | null
+
+The license type that has been allocated to this user.
+
+`admins` `agents` `dpde_all` `dpde_one` `lite_lines` `lite_support_agents` `magenta_lines` `talk`
+
+location
+
+string | null
+
+The user's current address.
+
+muted
+
+boolean | null
+
+A boolean indicating whether the user has muted thier microphone.
+
+office\_id
+
+int64 | null
+
+The ID of the user's office.
+
+on\_duty\_started
+
+date-time | null
+
+The timestamp, in UTC, when this operator became available for contact center calls.
+
+on\_duty\_status
+
+string | null
+
+A description of operator's on duty status.
+
+`available` `busy` `occupied` `occupied-end` `unavailable` `wrapup` `wrapup-end`
+
+phone\_numbers
+
+array of strings | null
+
+A list of phone numbers belonging to this user.
+
+phone\_numbers
+
+state
+
+string | null
+
+The current enablement state of the user.
+
+`active` `cancelled` `deleted` `pending` `suspended`
+
+status\_message
+
+string | null
+
+A message indicating the activity that the user is currently engaged in.
+
+timezone
+
+string | null
+
+The timezone that this user abides by.
+
+
+
+ShellNodeRubyPHPPython
+
+Base URL
+
+https://dialpad.com/api/v2/accesscontrolpolicies/{id}/assign
+
+xxxxxxxxxx
+
+1
+
+curl \--request POST \\
+
+2
+
+     \--url https://dialpad.com/api/v2/accesscontrolpolicies/id/assign \\
+
+3
+
+     \--header 'accept: application/json' \\
+
+4
+
+     \--header 'content-type: application/json' \\
+
+5
+
+     \--data '
+
+6
+
+{
+
+7
+
+  "target\_type": "company"
+
+8
+
+}
+
+9
+
+'
+
+Click `Try It!` to start a request and see the response here! Or choose an example:
+
+application/json
+
+200
+
