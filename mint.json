@@ -1,91 +1,499 @@
 {
   "$schema": "https://mintlify.com/schema.json",
-  "name": "Starter Kit",
+  "name": "developers-dialpad",
   "logo": {
-    "dark": "/logo/dark.svg",
-    "light": "/logo/light.svg"
+    "dark": "/logo/regular.png",
+    "light": "/logo/inverted.png"
   },
   "favicon": "/favicon.svg",
   "colors": {
-    "primary": "#0D9373",
-    "light": "#07C983",
-    "dark": "#0D9373",
+    "primary": "#6C3DFF",
+    "light": "#5923ff",
+    "dark": "#6C3DFF",
     "anchors": {
-      "from": "#0D9373",
-      "to": "#07C983"
+      "from": "#6C3DFF",
+      "to": "#5923ff"
     }
   },
   "topbarLinks": [
     {
-      "name": "Support",
-      "url": "mailto:hi@mintlify.com"
+      "name": "Register Now",
+      "url": "https://www.dialpad.com/events/crush-quotas-with-ai-sales/?source=webinar&utm_source=dp&utm_medium=headachebar&utm_campaign=DPAiSalesLaunchwbr_Jul2024"
     }
   ],
   "topbarCtaButton": {
-    "name": "Dashboard",
-    "url": "https://dashboard.mintlify.com"
+    "name": "Talk to sales",
+    "url": "https://www.dialpad.com/contact-sales/"
   },
   "tabs": [
     {
       "name": "API Reference",
-      "url": "api-reference"
+      "url": "reference"
+    },
+    {
+      "name": "New Releases",
+      "url": "changelog"
+    },
+    {
+      "name": "Discussions",
+      "url": "discuss"
     }
   ],
   "anchors": [
     {
-      "name": "Documentation",
-      "icon": "book-open-cover",
-      "url": "https://mintlify.com/docs"
-    },
-    {
-      "name": "Community",
-      "icon": "slack",
-      "url": "https://mintlify.com/community"
-    },
-    {
       "name": "Blog",
       "icon": "newspaper",
-      "url": "https://mintlify.com/blog"
+      "url": "https://dialpad.com/blog/"
+    },
+    {
+      "name": "Contact Us",
+      "icon": "envelope",
+      "url": "https://dialpad.com/contact-us/"
     }
   ],
+  "modeToggle": {
+    "default": "dark"
+  },
   "navigation": [
     {
-      "group": "Get Started",
+      "group": "Getting Started",
       "pages": [
-        "introduction",
-        "quickstart",
-        "development"
+        "docs/welcome",
+        "docs/guidelines",
+        "docs/publish-your-app"
       ]
     },
     {
-      "group": "Essentials",
+      "group": "Authentication",
       "pages": [
-        "essentials/markdown",
-        "essentials/code",
-        "essentials/images",
-        "essentials/settings",
-        "essentials/navigation",
-        "essentials/reusable-snippets"
+        "docs/authentication-basics",
+        "docs/api-key-generation",
+        "docs/oauth"
       ]
     },
     {
-      "group": "API Documentation",
+      "group": "Features",
       "pages": [
-        "api-reference/introduction"
+        "docs/ai-agent-assist",
+        "docs/digital-engagement-api",
+        {
+          "group": "Event Subscriptions",
+          "pages": [
+            "docs/event-subscriptions",
+            "docs/call-events",
+            "docs/sms-events",
+            "docs/contact-events",
+            "docs/agent-status-events",
+            "docs/change-log-events",
+            "docs/change-log-action-types"
+          ]
+        },
+        "docs/event-subscriptions-via-websocket",
+        "docs/app-launch-urls",
+        "docs/dialpad-mini-dialer",
+        "docs/call-routing-via-apis",
+        "docs/sms-api",
+        "docs/stats-api-dialpad-analytics",
+        "docs/access-control-policies"
       ]
     },
     {
-      "group": "Endpoint Examples",
+      "group": "Technical Specifications",
       "pages": [
-        "api-reference/endpoint/get",
-        "api-reference/endpoint/create",
-        "api-reference/endpoint/delete"
+        "docs/rate-limits",
+        "docs/a2p-compliance",
+        "docs/custom-ivr-types",
+        "docs/http-status-code"
+      ]
+    },
+    {
+      "group": "System Status",
+      "pages": [
+        "docs/dialpad-status"
+      ]
+    },
+    {
+      "group": "api",
+      "pages": [
+        "reference/download-api-collection",
+        {
+          "group": "accesscontrolpolicies",
+          "pages": [
+            "reference/accesscontrolpoliciesassign",
+            "reference/accesscontrolpoliciesassign",
+            "reference/accesscontrolpolicieslist",
+            "reference/accesscontrolpoliciescreate",
+            "reference/accesscontrolpoliciesdelete",
+            "reference/accesscontrolpoliciesget",
+            "reference/accesscontrolpoliciesupdate",
+            "reference/accesscontrolpoliciesassignments",
+            "reference/accesscontrolpoliciesunassign"
+          ]
+        },
+        {
+          "group": "app",
+          "pages": [
+            "reference/app_settingsget",
+            "reference/app_settingsget"
+          ]
+        },
+        {
+          "group": "blockednumbers",
+          "pages": [
+            "reference/blockednumbersadd",
+            "reference/blockednumbersadd",
+            "reference/blockednumbersget",
+            "reference/blockednumbersremove",
+            "reference/blockednumberslist"
+          ]
+        },
+        {
+          "group": "call",
+          "pages": [
+            "reference/callget_call_info",
+            "reference/callget_call_info",
+            "reference/callinitiate_ivr_call",
+            "reference/calllist",
+            "reference/callcall",
+            "reference/calltransfer_call",
+            "reference/callput_call_labels"
+          ]
+        },
+        {
+          "group": "callback",
+          "pages": [
+            "reference/callcallback",
+            "reference/callcallback",
+            "reference/callvalidate_callback"
+          ]
+        },
+        {
+          "group": "callcenters",
+          "pages": [
+            "reference/callcenterslistall",
+            "reference/callcenterslistall",
+            "reference/callcenterscreate",
+            "reference/callcentersdelete",
+            "reference/callcentersget",
+            "reference/callcentersupdate",
+            "reference/callcentersstatus",
+            "reference/callcentersoperatorsgetdutystatus",
+            "reference/callcentersoperatorsdutystatus",
+            "reference/callcentersoperatorsgetskilllevel",
+            "reference/callcentersoperatorsskilllevel",
+            "reference/callcentersoperatorsdelete",
+            "reference/callcentersoperatorsget",
+            "reference/callcentersoperatorspost"
+          ]
+        },
+        {
+          "group": "calllabels",
+          "pages": [
+            "reference/calllabellist",
+            "reference/calllabellist"
+          ]
+        },
+        {
+          "group": "callreviewsharelink",
+          "pages": [
+            "reference/call_review_share_linkcreate",
+            "reference/call_review_share_linkcreate",
+            "reference/call_review_share_linkdelete",
+            "reference/call_review_share_linkget",
+            "reference/call_review_share_linkupdate"
+          ]
+        },
+        {
+          "group": "callrouters",
+          "pages": [
+            "reference/callrouterslist",
+            "reference/callrouterslist",
+            "reference/callrouterscreate",
+            "reference/callroutersdelete",
+            "reference/callroutersget",
+            "reference/callroutersupdate",
+            "reference/numbersassign_call_router_numberpost"
+          ]
+        },
+        {
+          "group": "channels",
+          "pages": [
+            "reference/channelsdelete",
+            "reference/channelsdelete",
+            "reference/channelsget",
+            "reference/channelslist",
+            "reference/channelspost",
+            "reference/channelsmembersdelete",
+            "reference/channelsmemberslist",
+            "reference/channelsmemberspost"
+          ]
+        },
+        {
+          "group": "coachingteams",
+          "pages": [
+            "reference/coaching_teammembersget",
+            "reference/coaching_teammembersget",
+            "reference/coaching_teammembersadd",
+            "reference/coaching_teamget",
+            "reference/coaching_teamlistall"
+          ]
+        },
+        {
+          "group": "company",
+          "pages": [
+            "reference/companyget",
+            "reference/companyget",
+            "reference/companysms_opt_out"
+          ]
+        },
+        {
+          "group": "conference",
+          "pages": [
+            "reference/conference-roomslist",
+            "reference/conference-roomslist",
+            "reference/conference-meetingslist"
+          ]
+        },
+        {
+          "group": "contacts",
+          "pages": [
+            "reference/contactsdelete",
+            "reference/contactsdelete",
+            "reference/contactsget",
+            "reference/contactsupdate",
+            "reference/contactslist",
+            "reference/contactscreate",
+            "reference/contactscreate_with_uid"
+          ]
+        },
+        {
+          "group": "customivrs",
+          "pages": [
+            "reference/ivrdelete",
+            "reference/ivrdelete",
+            "reference/ivrupdate",
+            "reference/custom_ivrsget",
+            "reference/ivrcreate",
+            "reference/ivr_detailsupdate"
+          ]
+        },
+        {
+          "group": "departments",
+          "pages": [
+            "reference/departmentsdelete",
+            "reference/departmentsdelete",
+            "reference/departmentsget",
+            "reference/departmentsupdate",
+            "reference/departmentslistall",
+            "reference/departmentscreate",
+            "reference/departmentsoperatorsdelete",
+            "reference/departmentsoperatorsget",
+            "reference/departmentsoperatorspost"
+          ]
+        },
+        {
+          "group": "numbers",
+          "pages": [
+            "reference/numbersassign_numberpost",
+            "reference/numbersassign_numberpost",
+            "reference/numbersassign_target_numberpost",
+            "reference/numbersdelete",
+            "reference/numbersget",
+            "reference/numberslist",
+            "reference/formatpost"
+          ]
+        },
+        {
+          "group": "oauth2",
+          "pages": [
+            "reference/oauth2authorizeget",
+            "reference/oauth2authorizeget",
+            "reference/oauth2deauthorizepost-1",
+            "reference/oauth2tokenpost-1"
+          ]
+        },
+        {
+          "group": "offices",
+          "pages": [
+            "reference/planget",
+            "reference/planget",
+            "reference/callcenterslist",
+            "reference/coaching_teamlist",
+            "reference/departmentslist",
+            "reference/numbersassign_office_numberpost",
+            "reference/numbersoffice_unassign_numberpost",
+            "reference/officese911get",
+            "reference/officese911update",
+            "reference/planavailable_licensesget",
+            "reference/officesoffdutystatusesget",
+            "reference/officesget",
+            "reference/officeslist",
+            "reference/officescreate",
+            "reference/officesoperatorsdelete",
+            "reference/officesoperatorsget",
+            "reference/officesoperatorspost"
+          ]
+        },
+        {
+          "group": "recordingsharelink",
+          "pages": [
+            "reference/recordingsharelink",
+            "reference/recording_share_linkcreate",
+            "reference/recording_share_linkdelete",
+            "reference/recording_share_linkget",
+            "reference/recording_share_linkupdate"
+          ]
+        },
+        {
+          "group": "rooms",
+          "pages": [
+            "reference/numbersassign_room_numberpost",
+            "reference/numbersassign_room_numberpost",
+            "reference/numbersroom_unassign_numberpost",
+            "reference/roomsdelete",
+            "reference/roomsget",
+            "reference/roomspatch",
+            "reference/roomslist",
+            "reference/roomspost",
+            "reference/deskphonesroomscreate_international_pin",
+            "reference/deskphonesroomslist",
+            "reference/deskphonesroomspost",
+            "reference/deskphonesroomsdelete",
+            "reference/deskphonesroomsget"
+          ]
+        },
+        {
+          "group": "schedulereports",
+          "pages": [
+            "reference/schedule_reportsdelete",
+            "reference/schedule_reportsdelete",
+            "reference/schedule_reportsget",
+            "reference/schedule_reportsupdate",
+            "reference/schedule_reportslist",
+            "reference/schedule_reportscreate"
+          ]
+        },
+        {
+          "group": "sms",
+          "pages": [
+            "reference/smssend",
+            "reference/smssend"
+          ]
+        },
+        {
+          "group": "stats",
+          "pages": [
+            "reference/statsget",
+            "reference/statsget",
+            "reference/statscreate"
+          ]
+        },
+        {
+          "group": "subscriptions",
+          "pages": [
+            "reference/webhook_agent_status_event_subscriptionlist",
+            "reference/webhook_agent_status_event_subscriptionlist",
+            "reference/webhook_agent_status_event_subscriptioncreate",
+            "reference/webhook_agent_status_event_subscriptiondelete",
+            "reference/webhook_agent_status_event_subscriptionget",
+            "reference/webhook_agent_status_event_subscriptionupdate",
+            "reference/webhook_call_event_subscriptionlist",
+            "reference/webhook_call_event_subscriptioncreate",
+            "reference/webhook_call_event_subscriptiondelete",
+            "reference/webhook_call_event_subscriptionget",
+            "reference/webhook_call_event_subscriptionupdate",
+            "reference/webhook_change_log_event_subscriptionlist",
+            "reference/webhook_change_log_event_subscriptioncreate",
+            "reference/webhook_change_log_event_subscriptiondelete",
+            "reference/webhook_change_log_event_subscriptionget",
+            "reference/webhook_change_log_event_subscriptionupdate",
+            "reference/webhook_contact_event_subscriptionlist",
+            "reference/webhook_contact_event_subscriptioncreate",
+            "reference/webhook_contact_event_subscriptiondelete",
+            "reference/webhook_contact_event_subscriptionget",
+            "reference/webhook_contact_event_subscriptionupdate",
+            "reference/webhook_sms_event_subscriptionlist",
+            "reference/webhook_sms_event_subscriptioncreate",
+            "reference/webhook_sms_event_subscriptiondelete",
+            "reference/webhook_sms_event_subscriptionget",
+            "reference/webhook_sms_event_subscriptionupdate"
+          ]
+        },
+        {
+          "group": "transcripts",
+          "pages": [
+            "reference/transcriptsget",
+            "reference/transcriptsget",
+            "reference/transcriptsget_url"
+          ]
+        },
+        {
+          "group": "userdevices",
+          "pages": [
+            "reference/userdevicesget",
+            "reference/userdevicesget",
+            "reference/userdeviceslist"
+          ]
+        },
+        {
+          "group": "users",
+          "pages": [
+            "reference/usersinitiate_call",
+            "reference/usersinitiate_call",
+            "reference/usersupdate_active_call",
+            "reference/userstoggle_call_vi",
+            "reference/caller_idusersget",
+            "reference/caller_iduserspost",
+            "reference/deskphonesuserslist",
+            "reference/deskphonesuserspost",
+            "reference/deskphonesusersdelete",
+            "reference/deskphonesusersget",
+            "reference/numbersassign_user_numberpost",
+            "reference/numbersuser_unassign_numberpost",
+            "reference/userstoggle_dnd",
+            "reference/userse911get",
+            "reference/userse911update",
+            "reference/userspersonasget",
+            "reference/screen_popinitiate",
+            "reference/usersdelete",
+            "reference/usersget",
+            "reference/usersupdate",
+            "reference/userslist",
+            "reference/userscreate",
+            "reference/usersmove_officepatch"
+          ]
+        },
+        {
+          "group": "webhooks",
+          "pages": [
+            "reference/webhookslist",
+            "reference/webhookslist",
+            "reference/webhookscreate",
+            "reference/webhooksdelete",
+            "reference/webhooksget",
+            "reference/webhookupdate"
+          ]
+        },
+        {
+          "group": "websockets",
+          "pages": [
+            "reference/websocketslist",
+            "reference/websocketslist",
+            "reference/websocketscreate",
+            "reference/websocketsdelete",
+            "reference/websocketsget",
+            "reference/websocketsupdate"
+          ]
+        }
       ]
     }
   ],
   "footerSocials": {
-    "x": "https://x.com/mintlify",
-    "github": "https://github.com/mintlify",
-    "linkedin": "https://www.linkedin.com/company/mintsearch"
-  }
+    "facebook": "https://www.facebook.com/Dialpadhq/",
+    "twitter": "https://twitter.com/dialpad",
+    "linkedin": "https://www.linkedin.com/company/dialpad"
+  },
+  "openapi": [
+    "/openapi-0.json"
+  ]
 }
