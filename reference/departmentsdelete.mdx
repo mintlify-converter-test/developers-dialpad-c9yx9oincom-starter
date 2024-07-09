@@ -1,0 +1,262 @@
+---
+title: "Departments-- Delete"
+description: "delete https://dialpad.com/api/v2/departments/{id}"
+---
+#### URL Expired
+
+The URL for this request expired after 30 days.
+
+id
+
+int64
+
+required
+
+The department's id.
+
+# 200A successful response
+
+object
+
+auto\_call\_recording
+
+boolean | null
+
+Whether or not automatically record all calls of this department. Default is False.
+
+availability\_status
+
+string | null
+
+Availability status of the group.
+
+`closed` `holiday_closed` `holiday_open` `open`
+
+country
+
+string | null
+
+The country in which the user group resides.
+
+first\_action
+
+string | null
+
+The initial action to take upon receiving a new call.
+
+`menu` `operators`
+
+friday\_hours
+
+array of strings | null
+
+The Friday hours of operation. Default value is \["08:00", "18:00"\]
+
+friday\_hours
+
+group\_description
+
+string | null
+
+The description of the call center.
+
+hold\_queue
+
+object | null
+
+Configure how the calls are sent to a hold queue when all operators are busy on other calls.
+
+allow\_queuing
+
+boolean | null
+
+Whether or not send callers to a hold queue, if all operators are busy on other calls. Default is False.
+
+max\_hold\_count
+
+int64 | null
+
+If all operators are busy on other calls, send callers to a hold queue. This is to specify your queue size. Choose from 1-50. Default is 50.
+
+max\_hold\_seconds
+
+int64 | null
+
+Maximum queue wait time in seconds. Choose from 30s to 18000s (3 hours). Default is 900s (15 min).
+
+hours\_on
+
+boolean | null
+
+The time frame when the call center wants to receive calls. Default value is false, which means the call center will always take calls (24/7).
+
+id
+
+int64 | null
+
+The ID of the group entity.
+
+monday\_hours
+
+array of strings | null
+
+The Monday hours of operation. To specify when hours\_on is set to True. e.g. \["08:00", "12:00", "14:00", "18:00"\] => open from 8AM to Noon, and from 2PM to 6PM. Default value is \["08:00", "18:00"\].
+
+monday\_hours
+
+name
+
+string | null
+
+The name of the group.
+
+no\_operators\_action
+
+string | null
+
+The action to take if there are no operators available to accept an inbound call.
+
+`bridge_target` `company_directory` `department` `directory` `disabled` `extension` `menu` `message` `operator` `person` `scripted_ivr` `voicemail`
+
+office\_id
+
+int64 | null
+
+The ID of the office in which this group resides.
+
+phone\_numbers
+
+array of strings | null
+
+A list of phone numbers belonging to this group.
+
+phone\_numbers
+
+ring\_seconds
+
+int64 | null
+
+The number of seconds to allow the group line to ring before going to voicemail.
+
+routing\_options
+
+object | null
+
+Call routing options for this group.
+
+closed
+
+object | null
+
+Routing options to use during off hours.
+
+Group routing options for open or closed states. object | null
+
+open
+
+object | null
+
+Routing options to use during open hours.
+
+Group routing options for open or closed states. object | null
+
+saturday\_hours
+
+array of strings | null
+
+The Saturday hours of operation. Default is empty array.
+
+saturday\_hours
+
+state
+
+string | null
+
+The current enablement state of this group.
+
+`active` `cancelled` `deleted` `pending` `suspended`
+
+sunday\_hours
+
+array of strings | null
+
+The Sunday hours of operation. Default is empty array.
+
+sunday\_hours
+
+thursday\_hours
+
+array of strings | null
+
+The Thursday hours of operation. Default value is \["08:00", "18:00"\]
+
+thursday\_hours
+
+timezone
+
+string | null
+
+The timezone of the group.
+
+tuesday\_hours
+
+array of strings | null
+
+The Tuesday hours of operation. Default value is \["08:00", "18:00"\]
+
+tuesday\_hours
+
+voice\_intelligence
+
+object | null
+
+Configure voice intelligence.
+
+allow\_pause
+
+boolean | null
+
+Allow individual users to start and stop Vi during calls. Default is True.
+
+auto\_start
+
+boolean | null
+
+Auto start Vi for this call center. Default is True.
+
+wednesday\_hours
+
+array of strings | null
+
+The Wednesday hours of operation. Default value is \["08:00", "18:00"\]
+
+wednesday\_hours
+
+
+
+ShellNodeRubyPHPPython
+
+Base URL
+
+https://dialpad.com/api/v2/departments/{id}
+
+xxxxxxxxxx
+
+1
+
+curl \--request DELETE \\
+
+2
+
+     \--url https://dialpad.com/api/v2/departments/id \\
+
+3
+
+     \--header 'accept: application/json'
+
+Click `Try It!` to start a request and see the response here! Or choose an example:
+
+application/json
+
+200
+
