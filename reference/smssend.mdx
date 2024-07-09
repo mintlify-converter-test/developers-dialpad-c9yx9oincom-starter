@@ -1,0 +1,216 @@
+---
+title: "SMS -- Send"
+description: "post https://dialpad.com/api/v2/sms"
+---
+#### URL Expired
+
+The URL for this request expired after 30 days.
+
+channel\_hashtag
+
+string | null
+
+The hashtag of the channel which should receive the SMS.
+
+from\_number
+
+string | null
+
+The number of who sending the SMS. The number must be assigned to user or a user group. It will override user\_id and sender\_group\_id.
+
+infer\_country\_code
+
+boolean | null
+
+If true, to\_numbers will be assumed to be from the specified user's country, and the E164 format requirement will be relaxed.
+
+truefalse
+
+media
+
+string | null
+
+Base64-encoded media attachment (will cause the message to be sent as MMS).
+
+sender\_group\_id
+
+int64 | null
+
+The ID of an office, department, or call center that the User should send the message on behalf of.
+
+sender\_group\_type
+
+string | null
+
+The sender group's type (i.e. office, department, or callcenter).
+
+callcenterdepartmentoffice
+
+text
+
+string | null
+
+The contents of the message that should be sent.
+
+to\_numbers
+
+array of strings | null
+
+Up to 10 E164-formatted phone numbers who should receive the SMS.
+
+to\_numbers
+
+ADD string
+
+user\_id
+
+int64 | null
+
+The ID of the user who should be the sender of the SMS.
+
+# 200A successful response
+
+object
+
+contact\_id
+
+string | null
+
+The ID of the specific contact which SMS should be sent to.
+
+created\_date
+
+date-time | null
+
+Date of SMS creation.
+
+device\_type
+
+string | null
+
+The device type.
+
+`android` `ata` `audiocodes` `c2t` `ciscompp` `dect` `dpmroom` `harness` `iframe_cti_extension` `iframe_front` `iframe_hubspot` `iframe_ms_teams` `iframe_open_cti` `iframe_salesforce` `iframe_service_titan` `iframe_zendesk` `ipad` `iphone` `mini` `msteams` `native` `obi` `packaged_app` `polyandroid` `polycom` `proxy` `public_api` `salesforce` `sip` `tickiot` `web` `yealink`
+
+direction
+
+string | null
+
+SMS direction.
+
+`inbound` `outbound`
+
+from\_number
+
+string | null
+
+The phone number from which the SMS was sent.
+
+id
+
+int64 | null
+
+The ID of the SMS.
+
+message\_delivery\_result
+
+string | null
+
+The final message delivery result.
+
+`accepted` `internal_error` `invalid_destination` `invalid_source` `no_route` `not_supported` `rejected` `rejected_spam` `time_out`
+
+message\_status
+
+string | null
+
+The status of the SMS.
+
+`failed` `pending` `success`
+
+target\_id
+
+int64 | null
+
+The target's id.
+
+target\_type
+
+string | null
+
+Target's type.
+
+`callcenter` `callrouter` `channel` `coachinggroup` `coachingteam` `department` `office` `room` `staffgroup` `unknown` `user`
+
+text
+
+string | null
+
+The contents of the message that was sent.
+
+to\_numbers
+
+array of strings | null
+
+Up to 10 E164-formatted phone numbers who received the SMS.
+
+to\_numbers
+
+user\_id
+
+int64 | null
+
+The ID of the user who sent the SMS.
+
+
+
+ShellNodeRubyPHPPython
+
+Base URL
+
+https://dialpad.com/api/v2/sms
+
+xxxxxxxxxx
+
+1
+
+curl \--request POST \\
+
+2
+
+     \--url https://dialpad.com/api/v2/sms \\
+
+3
+
+     \--header 'accept: application/json' \\
+
+4
+
+     \--header 'content-type: application/json' \\
+
+5
+
+     \--data '
+
+6
+
+{
+
+7
+
+  "infer\_country\_code": false
+
+8
+
+}
+
+9
+
+'
+
+Click `Try It!` to start a request and see the response here! Or choose an example:
+
+application/json
+
+200 - json example
+
