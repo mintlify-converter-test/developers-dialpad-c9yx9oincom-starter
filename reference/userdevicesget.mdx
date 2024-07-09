@@ -1,0 +1,107 @@
+---
+title: "User Device -- Get"
+description: "get https://dialpad.com/api/v2/userdevices/{id}"
+---
+#### URL Expired
+
+The URL for this request expired after 30 days.
+
+id
+
+string
+
+required
+
+The device's id.
+
+# 200A successful response
+
+object
+
+app\_version
+
+string | null
+
+The device firmware version, or Dialpad app version.
+
+date\_created
+
+date-time | null
+
+The time at which this device was created.
+
+date\_registered
+
+date-time | null
+
+The most recent time at which the device registered with the backend.
+
+Devices register with the backend roughly once per hour, with the exception of mobile devices  
+(iphone, ipad, android) for which this field will always be blank.
+
+date\_updated
+
+date-time | null
+
+The most recent time at which the device data was modified.
+
+display\_name
+
+string | null
+
+The name of this device.
+
+id
+
+string | null
+
+The ID of the device.
+
+phone\_number
+
+string | null
+
+The phone number associated with this device.
+
+type
+
+string | null
+
+The device type.
+
+`android` `ata` `audiocodes` `c2t` `ciscompp` `dect` `dpmroom` `harness` `iframe_cti_extension` `iframe_front` `iframe_hubspot` `iframe_ms_teams` `iframe_open_cti` `iframe_salesforce` `iframe_service_titan` `iframe_zendesk` `ipad` `iphone` `mini` `msteams` `native` `obi` `packaged_app` `polyandroid` `polycom` `proxy` `public_api` `salesforce` `sip` `tickiot` `web` `yealink`
+
+user\_id
+
+int64 | null
+
+The ID of the user who owns the device.
+
+
+
+ShellNodeRubyPHPPython
+
+Base URL
+
+https://dialpad.com/api/v2/userdevices/{id}
+
+xxxxxxxxxx
+
+1
+
+curl \--request GET \\
+
+2
+
+     \--url https://dialpad.com/api/v2/userdevices/id \\
+
+3
+
+     \--header 'accept: application/json'
+
+Click `Try It!` to start a request and see the response here! Or choose an example:
+
+application/json
+
+200
+
