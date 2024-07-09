@@ -1,0 +1,134 @@
+---
+title: "Call Router -- List"
+description: "get https://dialpad.com/api/v2/callrouters"
+---
+#### URL Expired
+
+The URL for this request expired after 30 days.
+
+cursor
+
+string
+
+A token used to return the next page of a previous request. Use the cursor provided in the previous response.
+
+limit
+
+int64
+
+The maximum number of results to return.
+
+office\_id
+
+int64
+
+The office's id.
+
+# 200A successful response
+
+object
+
+cursor
+
+string | null
+
+A token used to return the next page of a previous request. Use the cursor provided in the previous response.
+
+items
+
+array of objects | null
+
+A list of call routers.
+
+items
+
+object
+
+default\_target\_id
+
+int64 | null
+
+The ID of the target that should be used as a fallback destination for calls if the call router is disabled or fails.
+
+default\_target\_type
+
+string | null
+
+The entity type of the default target.
+
+`callcenter` `callrouter` `channel` `coachinggroup` `coachingteam` `department` `office` `room` `staffgroup` `unknown` `user`
+
+enabled
+
+boolean | null
+
+If set to False, the call router will skip the routing url and instead forward calls straight to the default target.
+
+id
+
+int64 | null
+
+The API call router's ID.
+
+name
+
+string | null
+
+A human-readable display name for the router.
+
+office\_id
+
+int64 | null
+
+The ID of the office to which this router belongs.
+
+phone\_numbers
+
+array of strings | null
+
+The phone numbers that will cause inbound calls to hit this call router.
+
+phone\_numbers
+
+routing\_url
+
+string | null
+
+The URL that should be used to drive call routing decisions.
+
+signature
+
+object | null
+
+The signature that will be used to sign JWTs for routing requests.
+
+Signature settings. object | null
+
+
+
+ShellNodeRubyPHPPython
+
+Base URL
+
+https://dialpad.com/api/v2/callrouters
+
+xxxxxxxxxx
+
+1
+
+curl \--request GET \\
+
+2
+
+     \--url https://dialpad.com/api/v2/callrouters \\
+
+3
+
+     \--header 'accept: application/json'
+
+Click `Try It!` to start a request and see the response here! Or choose an example:
+
+application/json
+
+200 - json example
+
