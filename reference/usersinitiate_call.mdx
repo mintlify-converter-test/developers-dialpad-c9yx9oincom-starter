@@ -1,0 +1,152 @@
+---
+title: "Call -- Initiate"
+description: "post https://dialpad.com/api/v2/users/{id}/initiate_call"
+---
+#### URL Expired
+
+The URL for this request expired after 30 days.
+
+id
+
+string
+
+required
+
+The user's id. ('me' can be used if you are using a user level API key)
+
+custom\_data
+
+string | null
+
+Extra data to associate with the call. This will be passed through to any subscribed call events.
+
+group\_id
+
+int64 | null
+
+The ID of a group that will be used to initiate the call.
+
+group\_type
+
+string | null
+
+The type of a group that will be used to initiate the call.
+
+callcenterdepartmentoffice
+
+outbound\_caller\_id
+
+string | null
+
+The e164-formatted number shown to the call recipient (or "blocked").
+
+If set to "blocked", the recipient will receive a call from "unknown caller". The number can be the caller's number, or the caller's group number if the group is provided,  
+or the caller's company reserved number.
+
+phone\_number
+
+string | null
+
+The e164-formatted number to call.
+
+# 200A successful response
+
+object
+
+device
+
+object | null
+
+The device used to initiate the call.
+
+app\_version
+
+string | null
+
+The device firmware version, or Dialpad app version.
+
+date\_created
+
+date-time | null
+
+The time at which this device was created.
+
+date\_registered
+
+date-time | null
+
+The most recent time at which the device registered with the backend.
+
+Devices register with the backend roughly once per hour, with the exception of mobile devices  
+(iphone, ipad, android) for which this field will always be blank.
+
+date\_updated
+
+date-time | null
+
+The most recent time at which the device data was modified.
+
+display\_name
+
+string | null
+
+The name of this device.
+
+id
+
+string | null
+
+The ID of the device.
+
+phone\_number
+
+string | null
+
+The phone number associated with this device.
+
+type
+
+string | null
+
+The device type.
+
+`android` `ata` `audiocodes` `c2t` `ciscompp` `dect` `dpmroom` `harness` `iframe_cti_extension` `iframe_front` `iframe_hubspot` `iframe_ms_teams` `iframe_open_cti` `iframe_salesforce` `iframe_service_titan` `iframe_zendesk` `ipad` `iphone` `mini` `msteams` `native` `obi` `packaged_app` `polyandroid` `polycom` `proxy` `public_api` `salesforce` `sip` `tickiot` `web` `yealink`
+
+user\_id
+
+int64 | null
+
+The ID of the user who owns the device.
+
+
+
+ShellNodeRubyPHPPython
+
+Base URL
+
+https://dialpad.com/api/v2/users/{id}/initiate\_call
+
+xxxxxxxxxx
+
+1
+
+curl \--request POST \\
+
+2
+
+     \--url https://dialpad.com/api/v2/users/id/initiate\_call \\
+
+3
+
+     \--header 'accept: application/json' \\
+
+4
+
+     \--header 'content-type: application/json'
+
+Click `Try It!` to start a request and see the response here! Or choose an example:
+
+application/json
+
+200 - json example
+
