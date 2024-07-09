@@ -1,0 +1,88 @@
+---
+title: "Company -- Get"
+description: "get https://dialpad.com/api/v2/company"
+---
+| time | status | user agent |     |
+| --- | --- | --- | --- |
+| Make a request to see history. |     |     |     |
+
+#### URL Expired
+
+The URL for this request expired after 30 days.
+
+# 200A successful response
+
+object
+
+account\_type
+
+string | null
+
+Company pricing tier.
+
+admin\_email
+
+string | null
+
+Email address of the company administrator.
+
+country
+
+string | null
+
+Primary country of the company.
+
+domain
+
+string | null
+
+Domain name of user emails.
+
+id
+
+int64 | null
+
+The company's id.
+
+name
+
+string | null
+
+The name of the company.
+
+state
+
+string | null
+
+Enablement state of the company.
+
+`active` `cancelled` `deleted` `pending` `suspended`
+
+
+
+ShellNodeRubyPHPPython
+
+Base URL
+
+https://dialpad.com/api/v2/company
+
+xxxxxxxxxx
+
+1
+
+curl \--request GET \\
+
+2
+
+     \--url https://dialpad.com/api/v2/company \\
+
+3
+
+     \--header 'accept: application/json'
+
+Click `Try It!` to start a request and see the response here! Or choose an example:
+
+application/json
+
+200 - json example
+
