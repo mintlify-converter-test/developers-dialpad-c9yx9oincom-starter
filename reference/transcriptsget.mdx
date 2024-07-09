@@ -1,0 +1,102 @@
+---
+title: "Call Transcript -- Get"
+description: "get https://dialpad.com/api/v2/transcripts/{call_id}"
+---
+#### URL Expired
+
+The URL for this request expired after 30 days.
+
+call\_id
+
+int64
+
+required
+
+The call's id.
+
+# 200A successful response
+
+object
+
+call\_id
+
+int64 | null
+
+The call's id.
+
+lines
+
+array of objects | null
+
+An array of individual lines of the transcript.
+
+lines
+
+object
+
+contact\_id
+
+string | null
+
+The ID of the contact who was speaking.
+
+content
+
+string | null
+
+The transcribed text.
+
+name
+
+string | null
+
+The name of the call participant who was speaking.
+
+time
+
+date-time | null
+
+The time at which the line was spoken.
+
+type
+
+string | null
+
+Either "moment" or "transcript".
+
+`ai_question` `custom_moment` `moment` `real_time_moment` `transcript`
+
+user\_id
+
+int64 | null
+
+The ID of the user who was speaking.
+
+
+
+ShellNodeRubyPHPPython
+
+Base URL
+
+https://dialpad.com/api/v2/transcripts/{call\_id}
+
+xxxxxxxxxx
+
+1
+
+curl \--request GET \\
+
+2
+
+     \--url https://dialpad.com/api/v2/transcripts/call\_id \\
+
+3
+
+     \--header 'accept: application/json'
+
+Click `Try It!` to start a request and see the response here! Or choose an example:
+
+application/json
+
+200 - json example
+
