@@ -1,0 +1,108 @@
+---
+title: "Agent Status -- List"
+description: "get https://dialpad.com/api/v2/subscriptions/agent_status"
+---
+#### URL Expired
+
+The URL for this request expired after 30 days.
+
+cursor
+
+string
+
+A token used to return the next page of a previous request. Use the cursor provided in the previous response.
+
+limit
+
+int64
+
+The maximum number of results to return.
+
+# 200A successful response
+
+object
+
+cursor
+
+string | null
+
+A token used to return the next page of a previous request. Use the cursor provided in the previous response.
+
+items
+
+array of objects | null
+
+A list of SMS event subscriptions.
+
+items
+
+object
+
+agent\_type
+
+string | null
+
+required
+
+The agent type this event subscription subscribes to.
+
+`callcenter`
+
+enabled
+
+boolean | null
+
+Defaults to true
+
+Whether or not the this agent status event subscription is enabled.
+
+id
+
+int64 | null
+
+The event subscription's ID, which is generated after creating an event subscription successfully.
+
+webhook
+
+object | null
+
+The webhook's ID, which is generated after creating a webhook successfully.
+
+Webhook. object | null
+
+websocket
+
+object | null
+
+The websocket's ID, which is generated after creating a webhook successfully.
+
+Websocket. object | null
+
+
+
+ShellNodeRubyPHPPython
+
+Base URL
+
+https://dialpad.com/api/v2/subscriptions/agent\_status
+
+xxxxxxxxxx
+
+1
+
+curl \--request GET \\
+
+2
+
+     \--url https://dialpad.com/api/v2/subscriptions/agent\_status \\
+
+3
+
+     \--header 'accept: application/json'
+
+Click `Try It!` to start a request and see the response here! Or choose an example:
+
+application/json
+
+200 - json example
+
