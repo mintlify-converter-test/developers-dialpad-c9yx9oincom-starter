@@ -1,0 +1,77 @@
+---
+title: "App Settings -- GET"
+description: "get https://dialpad.com/api/v2/app/settings"
+---
+#### URL Expired
+
+The URL for this request expired after 30 days.
+
+target\_id
+
+int64
+
+The target's id.
+
+target\_type
+
+string
+
+The target's type.
+
+callcentercallrouterchannelcoachinggroupcoachingteamdepartmentofficeroomstaffgroupunknownuser
+
+# 200A successful response
+
+object
+
+enabled
+
+boolean | null
+
+Whether or not the OAuth app is enabled for the target.
+
+is\_preferred\_service
+
+boolean | null
+
+Whether or not Oauth app is preferred service for screen pop.
+
+settings
+
+object | null
+
+A dynamic object that maps settings to their values.
+
+It includes all standard settings, i.e. call\_logging\_enabled, call\_recording\_logging\_enabled,  
+voicemail\_logging\_enabled and sms\_logging\_enabled, and any custom settings this OAuth app supports.
+
+Has additional fields
+
+
+
+ShellNodeRubyPHPPython
+
+Base URL
+
+https://dialpad.com/api/v2/app/settings
+
+xxxxxxxxxx
+
+1
+
+curl \--request GET \\
+
+2
+
+     \--url https://dialpad.com/api/v2/app/settings \\
+
+3
+
+     \--header 'accept: application/json'
+
+Click `Try It!` to start a request and see the response here! Or choose an example:
+
+application/json
+
+200 - json example
+
