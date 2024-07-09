@@ -1,0 +1,82 @@
+---
+title: "Token -- Authorize"
+description: "get https://dialpad.com/oauth2/authorize"
+---
+#### URL Expired
+
+The URL for this request expired after 30 days.
+
+code\_challenge\_method
+
+string
+
+PKCE challenge method (hashing algorithm).
+
+S256plain
+
+code\_challenge
+
+string
+
+PKCE challenge value (hash commitment).
+
+scope
+
+string
+
+Space-separated list of additional scopes that should be granted to the vended token.
+
+response\_type
+
+string
+
+The OAuth flow to perform. Must be 'code' (authorization code flow).
+
+code
+
+redirect\_uri
+
+string
+
+required
+
+The URI the user should be redirected back to after granting consent to the app.
+
+client\_id
+
+string
+
+required
+
+The client\_id of the OAuth app.
+
+state
+
+string
+
+Unpredictable token to prevent CSRF.
+
+204
+
+A successful response
+
+
+
+ShellNodeRubyPHPPython
+
+Base URL
+
+https://dialpad.com/oauth2/authorize
+
+xxxxxxxxxx
+
+1
+
+curl \--request GET \\
+
+2
+
+     \--url https://dialpad.com/oauth2/authorize
+
+Click `Try It!` to start a request and see the response here!
+
