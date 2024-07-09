@@ -1,0 +1,88 @@
+---
+title: "Websocket -- List"
+description: "get https://dialpad.com/api/v2/websockets"
+---
+#### URL Expired
+
+The URL for this request expired after 30 days.
+
+cursor
+
+string
+
+A token used to return the next page of a previous request. Use the cursor provided in the previous response.
+
+limit
+
+int64
+
+The maximum number of results to return.
+
+# 200A successful response
+
+object
+
+cursor
+
+string | null
+
+A token used to return the next page of a previous request. Use the cursor provided in the previous response.
+
+items
+
+array of objects | null
+
+A list of websocket objects.
+
+items
+
+object
+
+id
+
+int64 | null
+
+The webhook's ID, which is generated after creating a webhook successfully.
+
+signature
+
+object | null
+
+Webhook's signature containing the secret.
+
+Signature settings. object | null
+
+websocket\_url
+
+string | null
+
+The websocket's URL. Users need to connect to this url to get event payloads via websocket.
+
+
+
+ShellNodeRubyPHPPython
+
+Base URL
+
+https://dialpad.com/api/v2/websockets
+
+xxxxxxxxxx
+
+1
+
+curl \--request GET \\
+
+2
+
+     \--url https://dialpad.com/api/v2/websockets \\
+
+3
+
+     \--header 'accept: application/json'
+
+Click `Try It!` to start a request and see the response here! Or choose an example:
+
+application/json
+
+200 - json example
+
